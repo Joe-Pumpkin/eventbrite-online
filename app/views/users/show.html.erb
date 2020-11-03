@@ -1,6 +1,21 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
+<h1>Hello <%= @user.first_name %>! </h1> 
 
-<h1>Hello le veau ! </h1>  
-<%= link_to "Edite ton profil",  edit_user_registration_path %>
+<div class="card border-info mt-5 mx-auto" style="max-width: 18rem;">
+    <div class="card-header"><%= @user.first_name %> <%= @user.last_name%></div>
+      <div class="card-body text-info">
+        <h5 class="card-title">Description :</h5>
+          <p class="card-text"><%= @user.description%></p>
+        
+          
+        <h5 class="card-title">Email :</h5>
+          <p class="card-text"><%= @user.email %></p>
+      </div>
+      </div>
+    
+  
+
+<div class="container">
+ 
+<%= link_to "Edite ton profil",  edit_user_registration_path, class: 'btn btn-primary' %>
+</div>
